@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basics</title>
+</head>
+
+<body>
+    <h1>Javascript basics</h1>
+    <ul>
+        <li>Spring</li>
+        <li>Summer</li>
+        <li>Fall</li>
+        <li>Winter</li>
+    </ul>
+    <script>
+      //hosting === the order
+      //context
+     //const gretting = () => console.log("Hi");
+
+     const gretting = name => console.log(`Hi ${name}`);
+     gretting("Kenai");
+
+     /*const plus = function(a,b){
+      return a + b;
+     }*/
+
+     const plus = (a,b) => a+b;
+
+     console.log(plus(9,9));
+
+     const multiLineFunction = () =>{
+      console.log("One");
+      console.log("Two");
+      console.log("Three");
+     }
+
+     multiLineFunction();
+
+     const numbers = [1,2,3,4,5];
+
+     /*numbers.forEach(function(el,index){
+      console.log(`Element: ${el} Index: ${index}`);
+     });*/
+     numbers.forEach((el,index)=>{
+      console.log(`Element: ${el} Index: ${index}`);
+     });
+
+     numbers.forEach((el,index)=> console.log(`Element: ${el} Index: ${index}`));
+
+     //global context
+     /*function Dog(){
+      console.log(this);
+     }
+
+     Dog();*/
+
+     // =>   === global context
+     // normal function === respect
+     const dog = {
+      name: "kenai",
+      barking(){
+        console.log(this)
+      }
+      /*barking () => {
+        console.log(this)
+      }*/
+     }
+
+     dog.barking();
+
+    </script>
+</body>
+
+</html>
